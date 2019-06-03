@@ -14,7 +14,6 @@ const app = express();
 
 // init utilities
 app.use(logger('dev'));
-// TODO: Restrict/verify headers type (application/JSON)?
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 

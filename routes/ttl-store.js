@@ -26,7 +26,6 @@ router.get('/:' + KEY, async function(req, res, next) {
 	const key = req.params[KEY];
 
 	const item = await ttlStore.get(key);
-	console.log('get result', item);
 
 	if (item)
 		res.send(item);
@@ -35,8 +34,6 @@ router.get('/:' + KEY, async function(req, res, next) {
 });
 
 router.post('/', async function(req, res, next) {
-	console.log('POST req.body', req.body);
-
 	const payload = req.body;
 	const key = payload[KEY];
 	const value = payload[VALUE];
