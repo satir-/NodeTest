@@ -16,7 +16,7 @@ router.use(async function (req, res, next) {
 router.get('/', function(req, res, next) {
 	const length = stack.length();
 
-	res.send(`Current stack length is ${length}`);
+	res.send(`Current stack length is ${length}. NOTE: Use GET /pop or POST /push to start working with a stack`);
 });
 
 router.get('/pop', async function(req, res, next) {

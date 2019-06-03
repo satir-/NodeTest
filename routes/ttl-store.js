@@ -19,10 +19,10 @@ router.use(async function (req, res, next) {
 });
 
 router.get('/', function(req, res, next) {
-	res.send(`Default TTL Store route. Please use GET /get, POST /set or DELETE /delete to operate with storage`);
+	res.send(`Default TTL Store route. Please use GET, POST or DELETE to operate with storage`);
 });
 
-router.get('/get/:' + KEY, async function(req, res, next) {
+router.get('/:' + KEY, async function(req, res, next) {
 	const key = req.params[KEY];
 
 	const item = await ttlStore.get(key);
@@ -34,7 +34,7 @@ router.get('/get/:' + KEY, async function(req, res, next) {
 		res.send(`No data were found by the key: ${key}`);
 });
 
-router.post('/set', async function(req, res, next) {
+router.post('/', async function(req, res, next) {
 	console.log('POST req.body', req.body);
 
 	const payload = req.body;
@@ -50,7 +50,7 @@ router.post('/set', async function(req, res, next) {
 		res.send(createError(`Error! Cannot inject value of ${value} with a key ${key} to TTL Store`));
 });
 
-router.delete('/delete/:' + KEY, async function(req, res, next) {
+router.delete('/:' + KEY, async function(req, res, next) {
 	const key = req.params[KEY];
 
 	const result = await ttlStore.delete(key);

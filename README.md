@@ -43,11 +43,11 @@ $ GET /stack/
 #### TTL Store
 * Add to key-value store
 ```bash
-$ GET /ttl-store/get/:key
+$ GET /ttl-store/:key
 ```
 * Get from key-value store
 ```bash
-$ POST {BODY} /ttl-store/set
+$ POST {BODY} /ttl-store
 ```
 Where __{BODY}__ - `application/JSON` type object with following properties:
 ```js
@@ -59,7 +59,7 @@ Where __{BODY}__ - `application/JSON` type object with following properties:
 ```
 * Delete from key-value store
 ```bash
-$ DELETE /ttl-store/delete/:key
+$ DELETE /ttl-store/:key
 ```
 
 ### Test:
