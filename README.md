@@ -54,7 +54,7 @@ Where __{BODY}__ - `application/JSON` type object with following properties:
   {
     key,   // key to reach the data
     value, // data to store
-    ttl    //(optional) time for a data to persist in ms 
+    ttl    // (optional) time for a data to persist in ms 
   }
 ```
 * Delete from key-value store
