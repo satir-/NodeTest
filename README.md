@@ -41,11 +41,11 @@ $ GET /stack/pop
 $ GET /stack/
 ```
 #### TTL Store
-* Add to key-value store
+* Get from key-value store
 ```bash
 $ GET /ttl-store/:key
 ```
-* Get from key-value store
+* Add to key-value store
 ```bash
 $ POST {BODY} /ttl-store
 ```
