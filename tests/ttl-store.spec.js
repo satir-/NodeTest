@@ -110,11 +110,14 @@ describe('ttl-store', () => {
 		test('should return false if there are no key or value were provided', async () => {
 			await ttlStore.initStorage();
 
-			expect(await ttlStore.set(key)).toEqual(false);
-			expect(nodePersistMock.getItem).not.toHaveBeenCalled();
+			expect(await ttlStore.set(key, '')).toEqual(false);
+			expect(await ttlStore.set(key, undefined)).toEqual(false);
+			expect(await ttlStore.set(key, null)).toEqual(false);
+			expect(await ttlStore.set(key, NaN)).toEqual(false);
+			expect(await ttlStore.set(key, [])).toEqual(false);
+			expect(await ttlStore.set(key, {})).toEqual(false);
 
 			expect(await ttlStore.set('', value)).toEqual(false);
-			expect(nodePersistMock.getItem).not.toHaveBeenCalled();
 
 			expect(await ttlStore.set()).toEqual(false);
 			expect(nodePersistMock.getItem).not.toHaveBeenCalled();
