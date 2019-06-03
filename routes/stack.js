@@ -13,13 +13,13 @@ router.use(async function (req, res, next) {
 	next();
 });
 
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
 	const length = stack.length();
 
 	res.send(`Current stack length is ${length}. NOTE: Use GET /pop or POST /push to start working with a stack`);
 });
 
-router.get('/pop', async function(req, res, next) {
+router.get('/pop', async function(req, res) {
 	const item = await stack.pop();
 
 	if (item)
@@ -28,7 +28,7 @@ router.get('/pop', async function(req, res, next) {
 		res.send('Stack is Empty!');
 });
 
-router.post('/push', async function(req, res, next) {
+router.post('/push', async function(req, res) {
 	const item = req.body;
 
 	if(await stack.push(item))

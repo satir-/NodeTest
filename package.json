@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "NODE_ENV=production node ./bin/www",
+    "lint": "eslint -c .eslintrc.json .",
     "test": "jest",
     "dev-start": "NODE_ENV=development nodemon ./bin/www"
   },
@@ -15,6 +16,8 @@
     "node-persist": "^3.0.4"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^22.6.4",
     "jest": "^24.8.0",
     "nodemon": "^1.19.1"
   }
