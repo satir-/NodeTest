@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "NODE_ENV=production node ./bin/www",
-    "test": "NODE_ENV=production jest",
+    "test": "jest",
     "dev-start": "NODE_ENV=development nodemon ./bin/www"
   },
   "dependencies": {

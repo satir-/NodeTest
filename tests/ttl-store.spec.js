@@ -19,7 +19,7 @@ describe('ttl-store', () => {
 
 	describe('initStorage', () => {
 		test('should init storage', async () => {
-			const logging = process.env.NODE_ENV === 'development' || false;
+			const logging = false;
 
 			await ttlStore.initStorage();
 

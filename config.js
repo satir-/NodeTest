@@ -1,5 +1,5 @@
 
-if (typeof process.env.NODE_ENV === 'undefined')
+if (!process.env.NODE_ENV)
 	process.env.NODE_ENV = 'development';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
