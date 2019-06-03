@@ -5,5 +5,6 @@ if (!process.env.NODE_ENV)
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 module.exports = {
-	logging: isDevelopment
+	logging: isDevelopment,
+	ttl: true // default flag for storage config, equals 24h TTL
 };

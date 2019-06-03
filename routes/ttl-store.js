@@ -37,7 +37,7 @@ router.post('/', async function(req, res) {
 	const payload = req.body;
 	const key = payload[KEY];
 	const value = payload[VALUE];
-	const ttl = parseInt(payload[TTL]);
+	const ttl = parseInt(payload[TTL]) || undefined;
 
 	const result = await ttlStore.set(key, value, ttl);
 
