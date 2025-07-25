@@ -1,9 +1,9 @@
-# NodeTest
+# Node Persistent Storage
 Express + Node.js - implementation of the test API for two pieces of functionality:
 * In-memory stack (LIFO);
 * In-memory key-value store with TTL.
 
-Both features will aloow persistent access to a data for a specified period of time (TTL).
+Both features will allow persistent access to a data for a specified period of time (TTL).
 
 ### Preconditions:
 Installed node.js and npm.
