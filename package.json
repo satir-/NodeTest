@@ -9,7 +9,7 @@
     "dev-start": "NODE_ENV=development nodemon ./bin/www"
   },
   "dependencies": {
-    "express": "~4.18.2",
+    "express": "~4.21.2",
     "http-errors": "~1.6.3",
     "lodash": "^4.17.21",
     "morgan": "~1.9.1",
